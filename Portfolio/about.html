@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="images/computer.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>About Myself</title>
+    <style>
+        body{
+            background-color:aliceblue;
+        }
+        #about{
+            animation-name:bigger;
+            animation-duration:3s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes bigger{
+            from{font-size: 300px;}
+            to{font-size: larger;}
+        }
+        #animated-text{
+            color:purple;
+        }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- Just an image -->
+    <a class="navbar-brand" href="#">
+      <img src="images/linkedin.jpg" width="50" height="50" alt="" style="border-radius:50%;">
+      </a>
+        <a class="navbar-brand" href="#">Srinidhi's Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mr-4" style="font-size: larger;">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active mr-4">
+              <a class="nav-link" href="about.html" id="about">About</a>
+            </li>
+            <li class="nav-item mr-4" style="font-size: larger;">
+                <a class="nav-link" href="project.html">Projects</a>
+            </li>
+            <li class="nav-item" style="font-size: larger;">
+                <a class="nav-link" href="contact.html">Contact Me</a>
+              </li>
+          </ul>
+      </nav>
+      <h6 class="display-4 font-weight-normal my-5 mx-3" style="display: flex; justify-content: center; align-items: center; font-size: 2rem;" id="animated-text">Student For Life | Exploration | Creativity!</h6>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+  var text = $("#animated-text").text();
+  $("#animated-text").empty(); // Clear the original text
+  
+  // Split the text into individual characters
+  var characters = text.split("");
+  
+  // Iterate through the characters and append them with a delay
+  $.each(characters, function(index, char) {
+    setTimeout(function() {
+      $("#animated-text").append(char);
+    }, 120 * index); // Adjust the delay (in milliseconds) according to your preference
+  });
+});
+</script>
+<div class="container my-4">
+    <div class="container my-4">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card text-white bg-info mb-3 d-flex flex-column">
+              <div class="card-body flex-fill">
+                <h5 class="card-title">Education</h5>
+                <p class="card-text">BSc CS Graduate who likes to explore and learn new things in web development! Knowledgeable in Java | HTML | CSS | Bootstrap | MySQL | Completed Internship through SDAC</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card text-white bg-info mb-3 d-flex flex-column">
+              <div class="card-body flex-fill" style="height: 149px";>
+                <h5 class="card-title">Qualities</h5>
+                <p class="card-text">Helping nature | Never give up | Enjoying the work</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  </div>
+
+  <div class="container my-4">
+    <div class="container my-4">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card text-white bg-info mb-3 d-flex flex-column">
+              <div class="card-body flex-fill" style="height: 149px;">
+                <h5 class="card-title">Hobbies</h5>
+                <p class="card-text">Sports | Travelling | Cultural Events | Communication | Calisthenics</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card text-white bg-info mb-3 d-flex flex-column">
+              <div class="card-body flex-fill" style="height: 149px;"> 
+                <h5 class="card-title">Achievements</h5>
+                <p class="card-text">1st price in Badminton competition held at Zestech event by Nagindas Khandwala College</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- Button trigger modal -->
+      <div class="d-flex justify-content-center align-items-center">
+        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal" style="border: 2px solid black; width: fit-content;">
+          View Internship Certificate
+        </button>
+      </div>
+      
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">SDAC Internship Certificate</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="images/internship.jpg" alt="image here" class="img-fluid">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  
+  </body>
+</html>
