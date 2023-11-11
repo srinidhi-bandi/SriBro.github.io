@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" type="image/x-icon" href="images/computer.png">
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <style>
+      #projects{
+            animation-name:bigger;
+            animation-duration:3s;
+            animation-fill-mode: forwards;
+            color: purple;
+        }
+        @keyframes bigger{
+            from{font-size: 300px;} 
+            to{font-size: larger;}
+        }
+        body{
+          background-color: aliceblue;
+        }
+    </style>
+    <title>My Projects</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <!-- Just an image -->
+      <!-- <a class="navbar-brand">
+          <img src="" width="45" height="45" alt="icon"
+              style="background-color: white; border-radius: 50%;">
+      </a> -->
+      <a class="navbar-brand" href="#">
+        <img src="images/linkedin.jpg" width="50" height="50" alt="" style="border-radius:50%;">
+      </a>
+      <a class="navbar-brand" style="color: white;">Srinidhi's Portfolio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item mr-4" style="font-size: larger;">
+                  <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item mr-4" style="font-size: larger;">
+                  <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item active mr-4" id="projects">
+                  <a class="nav-link" href="project.html">Projects</a>
+              </li>
+              <li class="nav-item" style="font-size: larger;">
+                  <a class="nav-link" href="contact.html">Contact Me</a>
+              </li>
+          </ul>
+  </nav>
+    <main role="main">
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-4 font-weight-normal my-5 mx-3" style="display: flex; justify-content: start; align-items: start; color:purple" id="animated-text">My Projects!</h1>
+          <h5 class="mx-4 my-0">
+            All my projects are PHP based and this is a place where I can
+            exhibit my creativity!
+          </h5>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md mx-3 bg-info d-flex flex-column" style="border-radius:20px">
+            <h2>Basic CRUD Application</h2>
+            <p>
+              We can perfom CRUD operation on students table having columns
+              name, rollno. Fill both values for insertion. Enter a rollno and
+              updated name for updation. Just enter the rollno for deletion and
+              press delete all for emptying the entire database.
+            </p>
+            <p class="mt-auto">
+              <a class="btn btn-light" style="border-color:2px solid black" href="http://65.2.148.156/" role="button">View hosted project</a>
+            </p>
+          </div>
+          <div class="col-md mx-3 my-3 bg-info d-flex flex-column" style="border-radius:20px">
+            <h2>Technology Blog Website</h2>
+            <p>
+              This is a blueprint of a static blog website which demonstrates how a technology blog can look
+              and also contains some usefull definitions and links. 
+            </p>
+            <p class="mt-auto">
+              <a class="btn btn-light" href="https://sribro.github.io/TechBlog/" role="button">View hosted project</a>
+            </p>
+          </div>
+          <div class="col-md mx-3 bg-info d-flex flex-column" style="border-radius:20px">
+            <h2>Badminton Racket Guide Website</h2>
+            <p>
+              This website helps users to find a their best fit badminton racket by taking the necessary input parameters. 
+              Also one can get detailed information related to the badminton racket configuration.
+            </p>
+            <p class="mt-auto">
+              <a class="btn btn-light"  href="#" role="button">View hosted project</a>
+            </p>
+          </div>
+        </div>
+
+        <hr />
+      </div>
+      <!-- /container -->
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function() {
+var text = $("#animated-text").text();
+$("#animated-text").empty(); // Clear the original text
+
+// Split the text into individual characters
+var characters = text.split("");
+
+// Iterate through the characters and append them with a delay
+$.each(characters, function(index, char) {
+  setTimeout(function() {
+    $("#animated-text").append(char);
+  }, 120 * index); // Adjust the delay (in milliseconds) according to your preference
+});
+});
+</script>
+  </body>
+</html>
