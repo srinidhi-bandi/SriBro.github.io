@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/x-icon" href="../images/elephent.png"></link>
+    <title>Random Animal Fact Generator</title>
+    <style>
+      #quote {
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center align-items-center">
+      <div class="card" style="width: fit-content; height:fit-content">
+        <div class="card-body">
+          <h5 class="card-title text-center justify-content-center align-items-center text-success">Animal Fun Facts!</h5>
+          <div id="quote-container">
+            <p id="quote"></p>
+          </div>
+          <a
+            href="#"
+            id="generate-btn"
+            style="cursor: pointer"
+            class="btn btn-outline-success text-center d-flex justify-content-center align-items-center"
+            >Generate Animal Fact!</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const quotes = [
+        "Turtles are from the same era as dinosaurs!",
+        "Pandas are found in the central part of China inside the thin bamboo forests!",
+        "Dolphins are the most intelligent species of the Ocean!",
+        "The naturally occurring layer of fat of Seals is called blubber!",
+        "Zebras travel 241 km every year to eat minerals that are necessary for their survival!",
+        "The bluish black color toungue of Giraffes protects them from the harmful ultravoilet rays","Capybaras are the biggest rodents on Earth!","The number of hairs on Porcupines exceeds 30,000!","The tongue of a blue whale weighs as that of an elephant!","It has been recorded that Polar bears have swam a winsome distance of 687km in a span of 10 days without resting!"
+      ];
+      const colors = ["yellow", "black", "white", "purple", "aqua"];
+      function generateQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        const randomQuote = quotes[randomIndex];
+
+        const quoteElement = document.getElementById("quote");
+        quoteElement.textContent = ""; // Clear the text initially
+
+        let index = 0;
+        const intervalId = setInterval(() => {
+          quoteElement.textContent += randomQuote[index];
+          index++;
+          if (index >= randomQuote.length) {
+            clearInterval(intervalId);
+          }
+        }, 25);
+
+        const randomColor =
+          "#" + Math.floor(Math.random() * 16777215).toString(16);
+        document.body.style.backgroundColor = randomColor;
+      }
+      document
+        .getElementById("generate-btn")
+        .addEventListener("click", generateQuote);
+
+      generateQuote();
+    </script>
+  </body>
+</html>
